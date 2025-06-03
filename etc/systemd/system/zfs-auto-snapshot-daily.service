@@ -1,0 +1,6 @@
+[Unit]
+Description=ZFS Auto Snapshot Daily
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/zfs-auto-snapshot --quiet --syslog --label=daily --keep=31
